@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me • Privacy Policy</title>
+  <meta name="description" content="Personal intro site with a dedicated Privacy Policy page for app submissions (Pinterest-ready)." />
+  <meta name="author" content="YOUR NAME" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Me • Privacy Policy" />
+  <meta property="og:description" content="Personal intro site with a dedicated Privacy Policy page for app submissions (Pinterest-ready)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example.com/" />
+  <meta property="og:image" content="https://your-domain.example.com/og-image.png" />
+
+  <!-- Structured Data: Person + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "About Me • Privacy Policy",
+    "url": "https://your-domain.example.com/",
+    "creator": {
+      "@type": "Person",
+      "name": "YOUR NAME",
+      "url": "https://your-domain.example.com/",
+      "sameAs": [
+        "https://www.pinterest.com/yourusername/",
+        "https://www.canva.com/p/yourprofile/",
+        "https://www.youtube.com/@yourchannel"
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #0b0d10;
+      --card: #12161c;
+      --muted: #a9b0bc;
+      --text: #e9edf2;
+      --brand: #e60023; /* Pinterest red */
+      --ok: #2ecc71;
+      --warn: #f39c12;
+      --radius: 18px;
+      --shadow: 0 8px 28px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--text);text-decoration:none}
+    a:hover{opacity:.9}
+
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg, rgba(11,13,16,.9), rgba(11,13,16,.6));backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(230,0,35,.25)}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
+    .links a{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+    .links a.active{border-color:var(--brand);box-shadow:0 0 0 4px rgba(230,0,35,.18)}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:32px 0}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .p24{padding:24px}
+    .muted{color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;background:#121b13;border:1px solid rgba(46, 204, 113,.4);color:#baf3cd;border-radius:999px;font-size:12px}
+    .stack{display:flex;flex-direction:column;gap:14px}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));cursor:pointer}
+    .btn.brand{border-color:rgba(230,0,35,.5)}
+    .btn:hover{transform:translateY(-1px)}
+
+    .avatar{width:100%;aspect-ratio:1/1;border-radius:var(--radius);background:linear-gradient(145deg, #151a22, #0d1117);border:1px solid rgba(255,255,255,.06);display:grid;place-items:center}
+    .avatar img{width:60%;opacity:.9;filter:grayscale(10%)}
+
+    section{display:none}
+    section.active{display:block}
+
+    h1{font-size:34px;margin:8px 0 8px}
+    h2{font-size:22px;margin:12px 0 8px}
+    h3{font-size:18px;margin:16px 0 8px;color:#dbe4f3}
+    p{margin:8px 0}
+    ul{margin:8px 0 8px 18px}
+
+    .grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px}
+    .tile{padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+
+    footer{border-top:1px solid rgba(255,255,255,.08);margin-top:28px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;flex-wrap:wrap;gap:12px}
+
+    .lang{display:flex;gap:8px}
+    .lang button{padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer}
+    .lang button.active{border-color:var(--brand)}
+
+    @media (max-width: 880px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> <span id="siteTitle">Portfolio • YOUR NAME</span></div>
+      <nav class="links" id="navLinks">
+        <a href="#/home" data-route="home" class="active">Home</a>
+        <a href="#/privacy" data-route="privacy">Privacy Policy</a>
+        <a href="#/contact" data-route="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Home -->
+    <section id="home" class="active">
+      <div class="hero">
+        <div class="card p24 stack">
+          <span class="badge" id="badge">Pinterest‑Ready • Policy Included</span>
+          <h1 id="introTitle">สวัสดี 👋 ฉันคือ <span style="color:var(--brand)">YOUR NAME</span></h1>
+          <p class="muted" id="introLead">ฉันเป็น Creator/Developer ที่รักในการสร้างสรรค์คอนเทนต์และเครื่องมืออัตโนมัติสำหรับ Pinterest และ Canva</p>
+          <div class="row">
+            <a class="btn brand" href="#/privacy" aria-label="Open Privacy Policy">View Privacy Policy</a>
+            <a class="btn" href="https://www.pinterest.com/yourusername/" target="_blank" rel="noopener">Pinterest</a>
+            <a class="btn" href="https://www.canva.com/p/yourprofile/" target="_blank" rel="noopener">Canva</a>
+          </div>
+          <div class="grid">
+            <div class="tile">
+              <h3>About</h3>
+              <p id="about">ฉันออกแบบไอคอนและสติกเกอร์แนวมินิมอล, automation script, และ workflow สำหรับนักสร้างสรรค์</p>
+            </div>
+            <div class="tile">
+              <h3>Focus</h3>
+              <ul id="focus">
+                <li>Canva Elements &amp; Metadata</li>
+                <li>Automation (n8n, API, Chrome Extensions)</li>
+                <li>Data‑Driven Design</li>
+              </ul>
+            </div>
+            <div class="tile">
+              <h3>Highlights</h3>
+              <ul>
+                <li>1000+ design assets</li>
+                <li>Batch pipelines for uploads</li>
+                <li>Open &amp; clear privacy practices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="avatar card">
+          <!-- Replace with your photo/logo -->
+          <img alt="Your logo" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Crect width='100%25' height='100%25' rx='28' ry='28' fill='%23121a23'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-size='42' fill='%23e9edf2' font-family='Segoe UI, Roboto, Arial'%3EYOUR LOGO%3C/text%3E%3C/svg%3E" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section id="privacy">
+      <div class="card p24">
+        <h2>Privacy Policy</h2>
+        <p class="muted" id="policyEffective">Effective Date: <span id="effectiveDate">2025‑08‑27</span></p>
+
+        <p>This Privacy Policy explains how <strong>YOUR NAME</strong> ("I", "me", or "my") collects, uses, and protects information when you interact with my apps, websites, or integrations (including any apps that connect to the Pinterest API). This page is intended to meet app‑store review requirements and provide clear transparency to users.</p>
+
+        <h3>What Information I Collect</h3>
+        <ul>
+          <li><strong>Public profile data</strong> you explicitly share with my app (e.g., username, display name) to enable features.</li>
+          <li><strong>Usage data</strong> such as basic logs and aggregated analytics (page views, clicks) to improve stability and UX.</li>
+          <li><strong>Contact information</strong> only if you voluntarily reach out (e.g., email), used solely to reply and support you.</li>
+          <li><strong>No sensitive categories</strong> (e.g., precise location, health) are intentionally collected.</li>
+        </ul>
+
+        <h3>How I Use Information</h3>
+        <ul>
+          <li>To operate the app and provide requested features.</li>
+          <li>To maintain security, prevent abuse, and debug issues.</li>
+          <li>To analyze usage in aggregate to improve performance.</li>
+        </ul>
+
+        <h3>Data Sharing</h3>
+        <p>I do <strong>not</strong> sell personal data. I may share limited data with trusted service providers (e.g., hosting or error logging) solely to operate the service under confidentiality obligations. If the app uses the <strong>Pinterest API</strong>, data access and usage comply with Pinterest’s Developer Guidelines. I do not claim ownership of your Pinterest content.</p>
+
+        <h3>Cookies and Local Storage</h3>
+        <p>This site may use strictly necessary cookies or local storage for essentials like language preference. No third‑party ad tracking is used.</p>
+
+        <h3>Data Retention</h3>
+        <p>I retain data only as long as necessary for the purposes above, then delete or anonymize it. You can request deletion at any time (see Contact).</p>
+
+        <h3>Your Rights</h3>
+        <ul>
+          <li>Request access, correction, or deletion of your personal data.</li>
+          <li>Object to or restrict certain processing where applicable by law.</li>
+          <li>Data portability for information you provided, when legally required.</li>
+        </ul>
+
+        <h3>Children’s Privacy</h3>
+        <p>My services are not directed to children under 13 (or the age required by your jurisdiction). I do not knowingly collect data from children.</p>
+
+        <h3>Security</h3>
+        <p>I use reasonable safeguards to protect information from unauthorized access or disclosure. However, no system is 100% secure.</p>
+
+        <h3>Changes to This Policy</h3>
+        <p>I may update this Policy from time to time. Material changes will be highlighted on this page with an updated Effective Date.</p>
+
+        <h3>Contact</h3>
+        <p>If you have questions or requests about this Policy, contact me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+
+        <hr style="border-color:rgba(255,255,255,.1)">
+        <h3>นโยบายความเป็นส่วนตัว (ภาษาไทยย่อ)</h3>
+        <p>หน้านี้อธิบายการเก็บ ใช้ และปกป้องข้อมูลเมื่อคุณใช้แอป/เว็บไซต์ของฉัน (รวมถึงแอปที่เชื่อมต่อกับ Pinterest API) โดยฉันจะเก็บเฉพาะข้อมูลเท่าที่จำเป็นเพื่อให้บริการ ทำบันทึกการใช้งานแบบรวมเพื่อปรับปรุงระบบ ไม่ขายข้อมูล และจะลบ/ไม่ระบุตัวตนเมื่อหมดความจำเป็น คุณสามารถติดต่อเพื่อขอเข้าถึง แก้ไข หรือให้ลบข้อมูลได้ที่ <a href="mailto:youremail@example.com">youremail@example.com</a> มีการอัปเดตนโยบายตามความเหมาะสม โดยระบุวันที่มีผลด้านบน</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="card p24 stack">
+        <h2>Contact</h2>
+        <p>For support or privacy inquiries, email <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+        <div class="row">
+          <a class="btn" href="mailto:youremail@example.com">Email Me</a>
+          <a class="btn brand" href="#/privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> YOUR NAME</div>
+      <div class="lang">
+        <button id="langTH">ไทย</button>
+        <button id="langEN" class="active">EN</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Simple hash routing & language toggle ---
+    const routes = ["home","privacy","contact"];
+    const sections = Object.fromEntries(routes.map(r=>[r, document.getElementById(r)]));
+    const navLinks = document.getElementById('navLinks').querySelectorAll('a[data-route]');
+
+    function setActive(route){
+      routes.forEach(r=>sections[r].classList.remove('active'));
+      (sections[route]||sections.home).classList.add('active');
+      navLinks.forEach(a=>a.classList.toggle('active', a.dataset.route===route));
+      // Update title for clarity
+      const t = route==='privacy' ? 'Privacy Policy • YOUR NAME' : route==='contact' ? 'Contact • YOUR NAME' : 'About Me • YOUR NAME';
+      document.title = t;
+    }
+
+    function parseRoute(){
+      const h = location.hash.replace(/^#!/,'#');
+      if (h.startsWith('#/privacy') || /[?&]privacy(=1)?\b/i.test(location.search)) return 'privacy';
+      if (h.startsWith('#/contact')) return 'contact';
+      return 'home';
+    }
+
+    window.addEventListener('hashchange', ()=>setActive(parseRoute()));
+    window.addEventListener('load', ()=>{
+      setActive(parseRoute());
+      // Effective date + year
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth()+1).padStart(2,'0');
+      const dd = String(d.getDate()).padStart(2,'0');
+      document.getElementById('effectiveDate').textContent = `${yyyy}-${mm}-${dd}`;
+
+      // Language preference
+      const saved = localStorage.getItem('lang') || 'en';
+      applyLang(saved);
+    });
+
+    // Simple i18n text nodes
+    const i18n = {
+      th: {
+        badge: 'พร้อมสมัคร Pinterest • มี Privacy Policy',
+        introTitle: 'สวัสดี 👋 ฉันคือ <span style="color:var(--brand)">YOUR NAME</span>',
+        introLead: 'ฉันเป็น Creator/Developer ที่รักในการสร้างสรรค์คอนเทนต์และเครื่องมืออัตโนมัติสำหรับ Pinterest และ Canva',
+        about: 'ฉันออกแบบไอคอนและสติกเกอร์แนวมินิมอล, automation script, และ workflow สำหรับนักสร้างสรรค์',
+        focus: ['องค์ประกอบ Canva & เมทาดาทา','ระบบอัตโนมัติ (n8n, API, Chrome Extensions)','ออกแบบด้วยข้อมูล (Data‑Driven)'],
+        siteTitle: 'Portfolio • YOUR NAME'
+      },
+      en: {
+        badge: 'Pinterest‑Ready • Policy Included',
+        introTitle: 'Hi 👋 I\'m <span style="color:var(--brand)">YOUR NAME</span>',
+        introLead: 'Creator/Developer building design assets and automations for Pinterest & Canva',
+        about: 'I design minimalist icons/stickers, build automation scripts, and creator workflows.',
+        focus: ['Canva Elements & Metadata','Automation (n8n, API, Chrome Extensions)','Data‑Driven Design'],
+        siteTitle: 'Portfolio • YOUR NAME'
+      }
+    };
+
+    function html(el, v){ el.innerHTML = v; }
+
+    function applyLang(lang){
+      const T = i18n[lang] || i18n.en;
+      html(document.getElementById('badge'), T.badge);
+      html(document.getElementById('introTitle'), T.introTitle);
+      html(document.getElementById('introLead'), T.introLead);
+      html(document.getElementById('about'), T.about);
+      document.getElementById('focus').innerHTML = T.focus.map(x=>`<li>${x}</li>`).join('');
+      document.getElementById('siteTitle').textContent = T.siteTitle;
+      // buttons state
+      document.getElementById('langTH').classList.toggle('active', lang==='th');
+      document.getElementById('langEN').classList.toggle('active', lang==='en');
+      localStorage.setItem('lang', lang);
+    }
+
+    document.getElementById('langTH').addEventListener('click', ()=>applyLang('th'));
+    document.getElementById('langEN').addEventListener('click', ()=>applyLang('en'));
+
+    // --- Developer tips ---
+    // Replace ALL placeholders: YOUR NAME, yourusername, yourprofile, youremail@example.com, your-domain.example.com
+    // Host this file on GitHub Pages / Netlify / Vercel.
+    // For Pinterest app submission, use the direct URL to the Privacy section, e.g.:
+    //   https://your-domain.example.com/#/privacy
+    // or append ?privacy=1: https://your-domain.example.com/?privacy=1
+  </script>
+</body>
+</html>
